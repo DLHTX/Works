@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .buber{
+            padding:5px;
+            border: 1px solid #666666;
+            display: inline-block;
+            position: relative;
+            background-color: #666666;
+            color: white;
+        }
+        .buber::after{
+            display: inline-block;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border: 1px solid #666666;
+            transform: rotateZ(45deg) ;
+            position: absolute;
+            top:-6px;
+            background-color: #666666;
+
+        }
+
+        .buber2{
+            padding:5px;
+
+            display: inline-block;
+            position: relative;
+            background-color: #EE4000;
+            color: white;
+
+        }
+        .buber2::after{
+            display: inline-block;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border: 1px solid #666666;
+            transform: rotateZ(45deg) ;
+            position: absolute;
+            top:-6px;
+            background-color: #666666;
+            z-index: -1;
+
+        }
+        .buber3{
+            padding:5px;
+
+            display: inline-block;
+            position: relative;
+            background-color: #55AA66;
+            color: white;
+
+        }
+        .buber3::after{
+            display: inline-block;
+            content: '';
+            width: 0px;
+            height: 0px;
+            padding: 0;
+            border-left:10px solid transparent;
+            border-top: 10px solid #EE4000;
+            top:0px;
+            right: 0px;
+
+
+            position: absolute;
+
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="buber">
+    提示元素
+</div>
+<div class="buber2">
+    提示元素
+</div>
+<div class="buber3">
+    提示元素
+</div>
+</body>
+</html>
