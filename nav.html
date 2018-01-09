@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+       nav{
+           width: 600px;
+           box-shadow: 0px 5px 20px 1px rgba(0,0,0,0.5);
+           margin:10px auto;
+           position: relative;
+
+        }
+        nav::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .nar>li{
+            float: left;
+        }
+        nav a{
+            padding: 8px 12px ;
+            display: block;
+            color: #4D4D4D;
+            text-decoration: none;
+            transition: all .3s;
+        }
+        nav .drop{
+            position:absolute;
+            box-shadow: 0px 5px 20px 1px rgba(0,0,0,0.5);
+            display: block;
+            height: 0px;
+            overflow: hidden;
+            transition: all .9s;
+            opacity: 0;
+        }
+        nav a:hover{
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+        }
+        nav>ul>li:hover .drop{
+            height:112px;
+            opacity: 1;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+<nav>
+    <ul class="nar">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">作品</a></li>
+        <li><a href="#">更多</a>
+            <ul class="drop">
+                <li><a href="">github</a></li>
+                <li><a href="">google</a></li>
+                <li><a href="">gucci</a></li>
+            </ul></li>
+    </ul>
+</nav>
+</body>
+</html>
