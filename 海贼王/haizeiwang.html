@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ONE PIECE</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_534384_p2e8rd25e14f5hfr.css">
+    <link rel="shortcut icon" href="favicon.ico" type="favicon.ico"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        html,body,main{
+            height: 100%;
+        }
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
+        header{
+            height: 75%;
+            background: url("background.jpg" )center center no-repeat;
+            background-size: cover;
+            font-family: "Apple Braille";
+            color:#ddd;
+            ont-size: 17px;
+
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        nav{
+            vertical-align: center;
+            text-align: center;
+
+            display: block;
+        }
+        nav>.logo{
+            width: 210px;
+            height: 50px;
+            float: left;
+            margin: 20px 25px;
+            position: fixed;
+        }
+        nav>.logo>img{
+            width: 100%;
+            height: 100%;
+        }
+        nav>ul>li{
+            float: left;
+            cursor: pointer;
+            margin: 30px 0;
+            font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+            color:#ddd;
+            padding:8px ;
+            transition: all .5s;
+            font-size: 17px;
+        }
+        nav>ul{
+            float: right;
+        }
+        nav>ul>li:hover {
+            color: #f83938;
+        }
+        .page-cont{
+            text-align: center;
+        }
+
+        .page-cont>h3{
+            margin-top: 200px;
+            font-size: 40px;
+
+        }
+        .page-cont>h1{
+            font-size: 70px;
+            text-transform: uppercase;
+            display: block;
+            margin-top: 15px;
+
+        }
+        .button{
+            padding: 10px 15px;
+            background-color: #f83938;
+            border-radius: 3px;
+
+        }
+        .page-cont>a{
+            margin-top: 60px;
+            display: inline-block;
+            font-size: 20px;
+            transition: all .5s;
+            color: #dddddd;
+        }
+        .page-cont>a:hover{
+            background-color: #b60505;
+
+        }
+        section{
+            color: #333333;
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .section-a{
+            text-align: center;
+            margin-top: 150px;
+
+
+        }
+        .section-a>h2{
+            display-inside:;
+            font-size: 40px;
+            font-weight: 700;
+
+        }
+        .section-a>p{
+            color: #727272;
+        }
+        .favicon{
+            height: 100px;
+            width: 100px;
+            margin: 0 auto;
+        }
+        .favicon>img{
+            height: 100%;
+            width: 100%;
+            border-radius:50%;
+
+        }
+        .section-a>ul>li{
+            text-align: center;
+            margin: 120px auto;
+            float: left;
+            width:33.33%;
+        }
+        .section-a>ul p{
+            padding: 15px 20px;
+            word-wrap: break-word;
+            white-space: normal;
+            font-size: 13px;
+
+
+        }
+        .section-a>ul h3{
+            padding-top: 20px;
+        }
+        .fix-img1{
+            height: 300px;
+            width: 100%;
+            background: url("fix1.jpeg") center center no-repeat ;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+        }
+        .fix-img1 h2{
+            font-size: 40px;
+            padding-top: 100px;
+            color: #dddddd;
+
+        }
+        .fix-img1 p{
+            color:#727272;
+        }
+        .section-b>ul>li{
+            width: calc(33.33% - 25px);
+            float: left;
+            margin-top: 100px;
+            margin-left: 20px;
+            height: 230px;
+
+
+        }
+        .section-b>ul>li img{
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: all .5s;
+            opacity: 1;
+        }
+        .section-b>ul>li h3{
+            padding-top: 20px;
+        }
+        .section-b>ul>li:hover img{
+            opacity: 0.8;
+
+
+        }
+        .fix-img2{
+            margin-top: 200px;
+            height: 300px;
+            width: 100%;
+            background: url("fix2.jpeg") center center no-repeat ;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+        }
+        .fix-img2 h2{
+            font-size: 40px;
+            padding-top: 100px;
+            color: white;
+
+        }
+        .fix-img2 p{
+            color:#727272;
+        }
+        .section-c ul li{
+            height: 160px;
+            margin-top: 200px;
+            padding-left: 100px;
+        }
+        .section-c ul li:nth-child(odd){
+            padding-right: calc(50% - 80px);
+        }
+        .section-c ul li:nth-child(even){
+            padding-left: calc(50% - 80px);
+        }
+
+        .section-c ul img{
+            height: 100%;
+            width: 160px;
+            border-radius: 50%;
+            border: 5px solid #DCDCDC;
+        }
+        .section-c ul li:nth-child(odd) img{
+            float: right;
+
+        }
+        .section-c ul li:nth-child(even) img{
+            float: left;
+        }
+
+        .section-c ul li:nth-child(odd) .deteil{
+            text-align: right;
+            word-break: break-all;
+            padding: 0px 10px;
+            margin-right: 180px;
+            display: block;
+        }
+        .section-c ul li:nth-child(even) .deteil{
+            text-align: left;
+            word-break: break-all;
+            padding: 0px 10px;
+            margin-left: 180px;
+            display: block;
+        }
+        .section-c>ul>li>::before{
+            content: '';
+            display:block;
+            width: 2px;
+            height: 400px;
+            background-color: #DCDCDC;
+            position: absolute;
+            left:calc(50% - 2px);
+            z-index: -1000;
+        }
+        .section-c ul li:last-child ::before{
+            height: 0;
+        }
+        .fix-img3{
+            margin-top: 200px;
+            height: 300px;
+            width: 100%;
+            background: url("fix3.jpeg") center center no-repeat ;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+        }
+        .fix-img3 h2{
+            font-size: 40px;
+            padding-top: 120px;
+            color: white;
+        }
+
+        .section-d>img{
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-top: 200px;
+        }
+
+        .section-d>ul>li{
+            display: inline-block;
+            font-size: 40px;
+            padding: 0 10px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all .5s;
+        }
+        .section-d>div{
+            margin-top: 30px;
+        }
+        .section-d>ul>li:hover{
+            color: #f83938;
+        }
+        .section-d>p{
+            word-break: break-all;
+            padding: 0 200px;
+            margin-top: 50px;
+            color:	#696969 ;
+        }
+         .back{
+            background: url("lastback.jpg") center center no-repeat;
+            background-size: cover;
+            height: 800px;
+            width: 100%;
+             margin-top: 200px;
+             text-align: center;
+
+         }
+        .back>h2{
+            padding-top: 250px;
+            font-size: 40px;
+            color: #dddddd;
+        }
+        .back>p{
+        font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #333333;
+            padding-top: 20px;
+        }
+        .back input{
+            display: block;
+        }
+        .back .one{
+               display: inline-block;
+               color: #cccccc;
+            transition: all .3s;
+            cursor: pointer;
+           }
+        .back .one:hover{
+            display: inline-block;
+            background: #333333;
+        }
+        .col-md-6 {
+            width: calc(50% - 250px);
+            float: left;
+            margin-right: 250px;
+        }
+        input.form-control {
+            height: 50px;
+            width: 120%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+        }
+        input{
+            padding: 20px;
+        }
+        textarea.form-control{
+            height: 236px;
+            width: 40%;
+
+        }
+        textarea {
+            padding: 20px;
+            margin: 50px;
+
+        }
+        .form-control {
+            display: block;
+
+            height: 34px;
+            padding: 10px 12px;
+            color: #555;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 40px;
+            margin-left: 150px;
+
+        }
+        .text{
+            margin-left: ;: -10px;
+        }
+        .foot{
+            height: 50px;
+            width: 100%;
+            z-index: 1000;
+            color: #333333;
+            text-align: center;
+            padding: 15px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<header>
+    <nav class="clearfix">
+        <div class="logo"><img src="logo.png" alt=""></div>
+        <ul>
+            <li>PRINCIPLE</li>
+            <li>PIRATES</li>
+            <li>MINOR</li>
+            <li>AUTHOR</li>
+            <li>CONTACT</li>
+        </ul>
+    </nav>
+    <div class="page-cont">
+        <h3>Please Must</h3>
+        <h1>Watch this cartoon！</h1>
+        <a href="" class="button">ONE PIECE</a>
+    </div>
+
+</header>
+<main>
+    <section class="section-a clearfix" >
+        <h2>PRINCIPLE</h2>
+        <p>Main members introduction.</p>
+        <ul class="clearfix">
+            <li>
+                <div class="favicon"><img src="lufei.jpg" alt=""></div>
+                <h3>Monkey D. Luffy</h3>
+                <p>Monkey D Luffy, Japanese cartoon "nautical king" hero, straw hats, straw hats ship thecaptain, one of the worst generation. Rubber fruit ability, a reward of 500 million Berri. The dream is to find the legendary One Piece and become a One Piece.</p>
+
+            </li>
+            <li><div class="favicon"><img src="namei.jpg" alt=""></div>
+                <h3>Nami</h3>
+                <p>Title: Nami, cat thief, Japanese cartoon "One Piece"  and derivative works in the role, the female lead, the straw hat pirates navigator, second partner  Luffy, offering a reward of 66 million Berri.</p>
+            </li>
+            <li><div class="favicon"><img src="suolong.jpg" alt=""></div>
+                <h3>Ronoya Zoro</h3>
+                <p>Ronoya Zoro, the Japanese comic role of "King" and nautical derivative works, straw hats swordman, using three knife fighting knife stream three swordsmen, one of the eleven generation of evil, a supernova is two years ago to build shampoo islands. Strong strength.</p>
+            </li>
+        </ul>
+
+
+
+
+
+    </section>
+    <div class="fix-img1">
+        <h2>PIRATES</h2>
+        <p>The introduction of other powerful group of Pirates</p>
+    </div>
+    <section class="section-b">
+        <ul class="clearfix">
+            <li>
+                <img src="1.jpg" alt="">
+                <h3>White beard group</h3>
+                <p>Edward Newgate</p>
+            </li>
+            <li>
+                <img src="2.jpg" alt="">
+                <h3>Red Haired Pirate Crew</h3>
+                <p>Shanks</p>
+            </li>
+            <li>
+                <img src="3.jpg" alt="">
+                <h3>Blackbeard Pirates</h3>
+                <p>Graphic Design</p>
+            </li>
+            <li>
+                <img src="4.jpg" alt="">
+                <h3>Donquixote family</h3>
+                <p>Doflamingo</p>
+            </li>
+            <li>
+                <img src="5.jpg" alt="">
+                <h3>Hydra Pirates</h3>
+                <p>Graphic Design</p>
+            </li>
+            <li>
+                <img src="6.jpg" alt="">
+                <h3>The straw hat Pirates</h3>
+                <p>Monkey D Luffy</p>
+            </li>
+        </ul>
+
+
+    </section>
+    <div class="fix-img2">
+        <h2>MINOR</h2>
+        <p>Other members of the grass cap group</p>
+    </div>
+    <section class="section-c">
+        <ul class="clearfix">
+            <li>
+                <img src="sz.jpg" alt="">
+               <div class="deteil">
+                   <h3>Sanji</h3>
+                <p>The fourth joining partners are chef. At the same time, he plays football very well. He has the name of black feet. Lu Fei et al met in the Sea restaurant. He finally joined the hegemony of the East China Sea. He dreamed that he could see the legendary ALL BLUE with his own eyes.</p>
+               </div>
+            </li>
+            <li>
+                <img src="usoppu.jpeg" alt="">
+                <div class="deteil">
+                    <h3>usoppu</h3>
+                    <p>s a third partner, is a sniper. His expertise is bragging. After he came to Lu, he beat the Pirates of Thorpe village and joined the dream.When he was a child, he was a famous Bragg king, and several children in the village formed the "uzbei Thorpe group", calling themselves captain Wu Thorpe.</p>
+                </div>
+            </li>
+            <li>
+                <img src="Chopper.jpeg" alt="">
+                <div class="deteil">
+                    <h3>Chopper</h3>
+                    <p>The fifth partners, the team is the most adorable, eat all the fruit of the reindeer, although every time is considered to be the cat. After Lu Fei helped to save his hometown, he joined the government with high technology. His dream is to have a group of real partners and to see the new world at sea.</p>
+                </div>
+            </li>
+            <li>
+                <img src="lb.jpeg" alt="">
+                <div class="deteil">
+                    <h3>Ms. All Sunday</h3>
+                    <p>Sixth partners, appearances earlier and later in the way people to solve Nicole Lubin island after joining justice. The ability to have the fruit of a demon is a historian who dreams of finding the history of the one hundred years that disappeared in the world.</p>
+                </div>
+            </li>
+            <li>
+                <img src="flq.jpeg" alt="">
+                <div class="deteil">
+                    <h3>Frankie</h3>
+                    <p>Seventh partners, remolding people, with superb shipbuilding technology, meet with Luofu in the water capital, and eventually help Luofu to create a new ship. The dream is to see that your boat can truly witness the world at the repeated invitation of the road.</p>
+                </div>
+
+            </li>
+            <li class="lastli">
+                <img src="blk.jpeg" alt="">
+                <div class="deteil">
+                    <h3>Brook</h3>
+                    <p>The eighth partner in the way of flying beat moonlight moglia after joining, occupation music is also added, huangquan fruit owner, superb technology, and dream that can fly all the way to reach the final and complete end point in the new world side agreed alhambra.</p>
+                </div>
+
+            </li>
+
+
+        </ul>
+    </section>
+    <div class="fix-img3">
+        <h2>AUTHOR</h2>
+    </div>
+    <section class="section-d">
+        <img src="zz.jpg" alt="">
+        <div>
+            <h3>Eiichiro Oda</h3>
+            <p>JAP</p>
+        </div>
+        <ul>
+            <li class="iconfont icon-in"></li>
+            <li class="iconfont icon-facebook"></li>
+            <li class="iconfont icon-twitter"></li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+    </section>
+    <div class="back">
+        <h2>CONTACT US</h2>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <div class="col-md-6">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name "></div>
+            <div class="form-group">
+                <input type="text" class="form-control"></div>
+            <div class="form-group">
+                <input type="text" class="form-control"></div>
+        </div>
+        <div class="text">
+            <textarea placeholder="YourMessage" id="message" class="form-control">
+
+        </textarea></div>
+        <div class="button one">SEND ME</div>
+    </div>
+    <div class="foot">
+        <p> ©2014-1018 本页面版权归DLHTX所有 浙ICP备8888888号 -8-</p>
+    </div>
+</main>
+</body>
+</html>
