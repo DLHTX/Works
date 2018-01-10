@@ -151,7 +151,7 @@
             padding-top: 20px;
         }
         .fix-img1{
-            height: 300px;
+            height: 400px;
             width: 100%;
             background: url("fix1.jpg") center center no-repeat ;
             background-size: cover;
@@ -160,7 +160,7 @@
         }
         .fix-img1 h2{
             font-size: 40px;
-            padding-top: 100px;
+            padding-top: 170px;
             color: #dddddd;
 
         }
@@ -193,7 +193,7 @@
         }
         .fix-img2{
             margin-top: 200px;
-            height: 300px;
+            height: 400px;
             width: 100%;
             background: url("fix2.jpg") center center no-repeat ;
             background-size: cover;
@@ -202,7 +202,7 @@
         }
         .fix-img2 h2{
             font-size: 40px;
-            padding-top: 100px;
+            padding-top: 170px;
             color: white;
 
         }
@@ -264,7 +264,7 @@
         }
         .fix-img3{
             margin-top: 200px;
-            height: 300px;
+            height: 400px;
             width: 100%;
             background: url("fix3.jpg") center center no-repeat ;
             background-size: cover;
@@ -273,7 +273,7 @@
         }
         .fix-img3 h2{
             font-size: 40px;
-            padding-top: 120px;
+            padding-top: 170px;
             color: white;
         }
 
@@ -309,8 +309,9 @@
             background-size: cover;
             height: 800px;
             width: 100%;
-             margin-top: 200px;
              text-align: center;
+             margin:200px auto auto 0;
+             position: relative;
 
          }
         .back>h2{
@@ -329,53 +330,64 @@
         .back .one{
                display: inline-block;
                color: #cccccc;
-            transition: all .3s;
-            cursor: pointer;
-           }
+               transition: all .3s;
+               cursor: pointer;
+               position: absolute;
+               left:calc(50% - 51px);
+                top:85%;
+
+
+
+        }
         .back .one:hover{
             display: inline-block;
             background: #333333;
         }
-        .col-md-6 {
-            width: calc(50% - 250px);
+        .box1 {
+            display: inline-block;
             float: left;
-            margin-right: 250px;
+            width: 50%;
+            margin-top: 50px;
         }
-        input.form-control {
+        .box2{
+            float: right;
+            width: 50%;
+            margin-top: 50px;
+
+        }
+        .box2 textarea{
+            height: 190px;
+            float: left;
+            width: 67%;
+            margin: 0 0 0 20px;
+            border-radius: 6px;
+            border:0px  ;
+            background-color: rgba(0,0,0,0.5);
+            color: #f83938;
+            font-size: 20px;
+        }
+        .box1 .form-group input{
+            margin: 0 20px 20px 0;
             height: 50px;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-
-        }
-        input{
-            padding: 20px;
-        }
-        textarea.form-control{
-            height: 236px;
-            width: 40%;
-
-        }
-        textarea {
-            padding: 20px;
-            margin: 50px;
-
-        }
-        .form-control {
             display: block;
+            width: 67%;
+            border-radius: 6px;
+            float: right;
+            border:0px  ;
+            background-color: rgba(0,0,0,0.5);
+            color: #f83938;
+            font-size: 20px;
 
-            height: 34px;
-            padding: 10px 12px;
-            color: #555;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-top: 40px;
-            margin-left: 150px;
 
         }
-        .text{
-            margin-left: ;: -10px;
-        }
+
+
+
+
+
+
+
+
         .foot{
             height: 50px;
             width: 100%;
@@ -558,21 +570,32 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
     </section>
     <div class="back">
+
+
         <h2>CONTACT US</h2>
         <p>Lorem ipsum dolor sit amet consectetur.</p>
-        <div class="col-md-6">
+
+
+
+
+        <div class="box1 clearfix">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Your Name "></div>
             <div class="form-group">
-                <input type="text" class="form-control"></div>
+                <input type="text" class="form-control" placeholder="Your Adress"></div>
             <div class="form-group">
-                <input type="text" class="form-control"></div>
+                <input type="text" class="form-control" placeholder="Your Email"></div>
         </div>
-        <div class="text">
+        <div class="box2 clearfix">
             <textarea placeholder="YourMessage" id="message" class="form-control">
 
         </textarea></div>
-        <div class="button one">SEND ME</div>
+
+
+
+
+
+        <div class="button one clearfix">SEND ME</div>
     </div>
     <div class="foot">
         <p> ©2014-1018 本页面版权归DLHTX所有 浙ICP备8888888号 -8-</p>
