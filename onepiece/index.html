@@ -29,6 +29,7 @@
             color:white;
             ont-size: 17px;
 
+
         }
         .clearfix::after{
             content: '';
@@ -38,15 +39,26 @@
         nav{
             vertical-align: center;
             text-align: center;
-
             display: block;
+            position: fixed;
+
+            width: 100%;
+        }
+        nav::before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;left: 0;right: 0;bottom: 0;
+            background-color: rgba(0,0,0,1);
+            z-index: -1;
+
         }
         nav>.logo{
             width: 210px;
             height: 50px;
-            float: left;
             margin: 20px 25px;
             position: fixed;
+
         }
         nav>.logo>img{
             width: 100%;
@@ -54,6 +66,7 @@
         }
         nav>ul>li{
             float: left;
+
             cursor: pointer;
             margin: 30px 0;
             font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;;
@@ -61,19 +74,23 @@
             padding:8px ;
             transition: all .5s;
             font-size: 17px;
+
+
         }
         nav>ul{
             float: right;
+
         }
         nav>ul>li:hover {
             color: #f83938;
         }
         .page-cont{
             text-align: center;
+            padding-top: 300px;
         }
 
         .page-cont>h3{
-            margin-top: 200px;
+
             font-size: 40px;
 
         }
@@ -407,6 +424,7 @@
 <body>
 <header>
     <nav class="clearfix">
+
         <div class="logo"><img src="logo.png" alt=""></div>
         <ul>
             <li>PRINCIPLE</li>
@@ -415,7 +433,9 @@
             <li>AUTHOR</li>
             <li>CONTACT</li>
         </ul>
+
     </nav>
+
     <div class="page-cont">
         <h3>Please Must</h3>
         <h1>Watch this cartoon！</h1>
