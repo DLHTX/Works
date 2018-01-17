@@ -5,6 +5,7 @@
     <title>ONE PIECE</title>
     <link rel="stylesheet" href="//at.alicdn.com/t/font_534384_p2e8rd25e14f5hfr.css">
     <link rel="shortcut icon" href="favicon.ico" type="favicon.ico"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_544815_hhe92lmuo2inewmi.css">
     <style>
         *{
             margin: 0;
@@ -28,9 +29,10 @@
             font-family: "Apple Braille";
             color:white;
             ont-size: 17px;
-
+            position: relative;
 
         }
+
         .clearfix::after{
             content: '';
             display: block;
@@ -50,7 +52,7 @@
             position: absolute;
             top: 0;left: 0;right: 0;bottom: 0;
             background-color: rgba(0,0,0,1);
-            z-index: -1;
+            z-index: -2;
 
         }
         nav>.logo{
@@ -58,6 +60,7 @@
             height: 50px;
             margin: 20px 25px;
             position: fixed;
+            cursor: pointer;
 
         }
         nav>.logo>img{
@@ -408,6 +411,176 @@
 
 
 
+        .face{
+            width: 600px;
+            height: 400px;
+            position: absolute;
+            background-color:rgba(255,255,255,0.95);
+            z-index: 3;
+            left: calc(50% - 300px);
+            top: calc(50% - 200px);
+            text-align: center;
+            box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.5);
+            border-radius: 5px  ;
+            transition: all .5s;
+            opacity: 0;
+            position: fixed;
+
+
+
+        }
+        .register{
+            transform: perspective(1000px) rotateY(-180deg);
+            backface-visibility: hidden;
+        }
+        .routeL{
+            transform: perspective(1000px) rotateY(180deg);
+            backface-visibility: hidden;
+            transition: all .8s;
+        }
+        .routeR{
+            transform: perspective(1000px) rotateY(0deg);
+            transition: all .8s;
+        }
+
+
+        .routeL2{
+            transform: perspective(1000px) rotateX(0deg);
+            transition: all .8s;
+            backface-visibility: hidden;
+
+        }
+        .routeR2{
+            transform: perspective(1000px) rotateY(-180deg);
+            transition: all .8s;
+            backface-visibility: hidden;
+        }
+
+
+        .login>p{
+            display: inline-block;
+            font-size: 30px;
+            margin: 30px 10px 0px 30px;
+            cursor: pointer;
+
+        }
+        .register>p{
+            display: inline-block;
+            font-size: 30px;
+            margin: 30px 10px 0px 30px;
+            cursor: pointer;
+
+        }
+        .login>.loginin{
+            border-bottom: 2px solid black ;
+        }
+        .register>.reisterer{
+            border-bottom: 2px solid black ;
+        }
+        .facebox{
+            width: 400px;
+            height: 200px;
+            margin: 0 auto;
+            padding: 20px;
+
+        }
+        .users {
+            width: 100%;
+            height: 30%;
+            margin-bottom: 30px;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #a4a6a7;
+            border-radius: 5px;
+        }
+
+        .password {
+            width: 100%;
+            height: 30%;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #a4a6a7;
+            border-radius: 5px;
+        }
+        .facebox input{
+            outline: none;
+            border: 0px;
+            width: 80%;
+            height: 90%;
+            font-size: 15px;
+        }
+        .login-btn{
+            padding: 8px 15px;
+            background-color: #333333;
+            display: inline-block;
+            border-radius: 3px;
+            color: white;
+            cursor: pointer;
+            outline: none;
+            border: 0px;
+            margin-top: 30px;
+        }
+        .login-btn:hover{
+            background-color: #f83938;
+            transition: all .5s;
+        }
+        .facebox i{
+            font-size: 20px;
+        }
+        .facebox.two .users{
+            margin-bottom: 10px;
+        }
+        .facebox.two .password{
+            margin-bottom: 10px;
+        }
+        .register-btn{
+            padding: 8px 15px;
+            background-color: #333333;
+            display: inline-block;
+            border-radius: 3px;
+            color: white;
+            cursor: pointer;
+            outline: none;
+            border: 0px;
+            margin-top: 40px;
+        }
+        .register-btn:hover{
+            background-color: #f83938;
+            transition: all .5s;
+        }
+        .icon-guanbi{
+            position: absolute;
+            left: 94%;
+            top:3%;
+            cursor: pointer;
+        }
+        .errormsg{
+            color: #f83938;
+            height: 22px;
+            margin-bottom: 10px;
+
+        }
+
+        .backcol{
+            background-color: #f83938;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -422,6 +595,59 @@
     </style>
 </head>
 <body>
+<div class="face login" id="login">
+    <i class="iconfont icon-guanbi"></i>
+    <p class="loginin one">登录</p>
+    <p class="reisterer one">注册</p>
+
+    <form action="/login" method="post">
+        <div class="facebox one">
+        <div class="errormsg"></div>
+        <div class="users">
+        <i class="iconfont icon-yonghu"></i>
+        <input type="text" placeholder="请输入用户名" class="login-user" name="username">
+        </div>
+
+        <div class="password">
+        <i class="iconfont icon-mima"></i>
+        <input type="text" placeholder="请输入密码" class="login-passw" name="password">
+        </div>
+
+    </div>
+    <input class="login-btn" type="submit" value="登录">
+    </form>
+
+</div>
+<div class="face register" id="register">
+    <i class="iconfont icon-guanbi"></i>
+    <p class="loginin two">登录</p>
+    <p class="reisterer two">注册</p>
+
+    <form action="/register" method="post">
+    <div class="facebox two">
+        <div class="errormsg"></div>
+        <div class="users two">
+            <i class="iconfont icon-yonghu"></i>
+            <input type="text" placeholder="请输入用户名" name="username">
+        </div>
+
+        <div class="password o">
+            <i class="iconfont icon-mima"></i>
+            <input type="text"  placeholder="请输入密码" name="password">
+        </div>
+        <div class="password t">
+            <i class="iconfont icon-mima"></i>
+            <input type="text" placeholder="请再次输入密码" name="password2">
+        </div>
+
+    </div>
+    <input class="register-btn" type="submit" value="注册">
+
+    </form>
+
+
+
+</div>
 <header>
     <nav class="clearfix">
 
@@ -611,5 +837,94 @@
         <p> ©2014-1018 本页面版权归DLHTX所有 浙ICP备8888888号 -8-</p>
     </div>
 </main>
+<script>
+    function $(sel) {
+        return document.querySelector(sel)
+    }
+    function $$(sel) {
+        return document.querySelectorAll(sel)
+    }
+
+    var login = $('#login')
+    var register = $('#register')
+    var reisterer = $('.reisterer')
+    reisterer.addEventListener('click',function () {
+        login.classList.add('routeL')
+        login.classList.remove('routeL2')
+        register.classList.remove('routeR2')
+        register.classList.add('routeR')
+    })
+    var loginin = $('.two')
+    loginin.addEventListener('click',function () {
+        login.classList.add('routeL2')
+        login.classList.remove('routeL')
+        register.classList.remove('routeR')
+        register.classList.add('routeR2')
+    })
+    var close = $('.icon-guanbi')
+    var close2= $('#register .icon-guanbi')
+    var logo = $$('.logo')[0]
+    logo.addEventListener('click',function () {
+        login.style.opacity = '1'
+        register.style.opacity = '1'
+    })
+    close.addEventListener('click',function () {
+        login.style.opacity = '0'
+        register.style.opacity = '0'
+    })
+    close2.addEventListener('click',function () {
+        login.style.opacity = '0'
+        register.style.opacity = '0'
+    })
+    var username = $('.login-user')
+    var loginpassw = $('.login-passw')
+    $('#login form').addEventListener('submit',function (e) {
+        e.preventDefault()
+        if(!/^\w{3,8}$/.test($('.facebox.one input[name=username]').value)){
+            $('.facebox.one .errormsg').innerText = '用户名不符合要求'
+            return false
+        }
+        if(!/^\w{6,10}$/.test($('.facebox.one input[name=password]').value)){
+            $('.facebox.one>.errormsg').innerText = '密码不符合要求'
+            return false
+        }
+        this.submit()
+        console.log('1')
+
+    })
+
+    $('#register form').addEventListener('submit',function (e) {
+        e.preventDefault()
+        if(!/^\w{3,8}$/.test($('.facebox.two input[name=username]').value)){
+            $('.facebox.two .errormsg').innerText = '用户名不符合要求'
+            return false
+        }
+        if(!/^\w{6,10}$/.test($('.facebox.two input[name=password]').value)){
+            $('.facebox.two>.errormsg').innerText = '密码不符合要求'
+            return false
+        }
+        if(($('.facebox.two input[name=password2]').value !==$('.facebox.two input[name=password]'))){
+            $('.facebox.two>.errormsg').innerText = '两次密码不一致，请重新输入！'
+            return false
+        }
+
+        this.submit()
+        console.log('1')
+
+    })
+
+     $$('input').onclick = function () {
+         this.classList.add('backcol')
+     }
+
+
+
+
+    
+
+
+
+
+</script>
 </body>
 </html>
