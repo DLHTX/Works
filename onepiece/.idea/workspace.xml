@@ -17,8 +17,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="417" column="50" lean-forward="false" selection-start-line="417" selection-start-column="50" selection-end-line="417" selection-end-column="50" />
+            <state relative-caret-position="39">
+              <caret line="519" column="24" lean-forward="true" selection-start-line="519" selection-start-column="24" selection-end-line="519" selection-end-column="24" />
               <folding>
                 <element signature="e#359#454#0" expanded="false" />
                 <element signature="e#477#514#0" expanded="false" />
@@ -100,8 +100,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1250" />
-    <option name="y" value="36" />
+    <option name="x" value="1257" />
+    <option name="y" value="22" />
     <option name="width" value="1063" />
     <option name="height" value="1305" />
   </component>
@@ -185,12 +185,12 @@
       <workItem from="1515760607681" duration="3321000" />
       <workItem from="1515764736004" duration="277000" />
       <workItem from="1516167971815" duration="113000" />
-      <workItem from="1516168105950" duration="14291000" />
+      <workItem from="1516168105950" duration="15669000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49102000" />
+    <option name="totallyTimeSpent" value="50480000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -202,7 +202,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1250" y="36" width="1063" height="1305" extended-state="0" />
+    <frame x="1257" y="22" width="1063" height="1305" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -531,8 +531,8 @@
     <entry file="file://$PROJECT_DIR$/haizeiwang.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="417" column="50" lean-forward="false" selection-start-line="417" selection-start-column="50" selection-end-line="417" selection-end-column="50" />
+        <state relative-caret-position="39">
+          <caret line="519" column="24" lean-forward="true" selection-start-line="519" selection-start-column="24" selection-end-line="519" selection-end-column="24" />
           <folding>
             <element signature="e#359#454#0" expanded="false" />
             <element signature="e#477#514#0" expanded="false" />

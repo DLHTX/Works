@@ -411,6 +411,7 @@
 
 
 
+
         .face{
             width: 600px;
             height: 400px;
@@ -420,14 +421,15 @@
             left: calc(50% - 300px);
             top: calc(50% - 200px);
             text-align: center;
-            box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.5);
+            border: 1px solid rgba(0,0,0,0.1);
             border-radius: 5px  ;
             transition: all .5s;
             opacity: 0;
             position: fixed;
-
-
-
+        }
+        .face:hover{
+            box-shadow: 5px 5px 20px  rgba(0,0,0,0.5);
+            transition: all .5s;
         }
         .register{
             transform: perspective(1000px) rotateY(-180deg);
@@ -492,6 +494,11 @@
             padding: 10px;
             border: 1px solid #a4a6a7;
             border-radius: 5px;
+            transition: all 1s;
+        }
+        .users:hover{
+            box-shadow: 0px 5px 10px  rgba(0,0,0,0.5);
+            transition: all 1s;
         }
 
         .password {
@@ -501,7 +508,13 @@
             padding: 10px;
             border: 1px solid #a4a6a7;
             border-radius: 5px;
+            transition: all 1s;
         }
+        .password:hover{
+            box-shadow: 0px 5px 10px  rgba(0,0,0,0.5);
+            transition: all 1s;
+        }
+
         .facebox input{
             outline: none;
             border: 0px;
@@ -519,10 +532,14 @@
             outline: none;
             border: 0px;
             margin-top: 30px;
+            transition: all .5s;
+
         }
         .login-btn:hover{
             background-color: #f83938;
             transition: all .5s;
+            box-shadow: 0px 5px 10px  rgba(0,0,0,0.5);
+
         }
         .facebox i{
             font-size: 20px;
@@ -543,10 +560,12 @@
             outline: none;
             border: 0px;
             margin-top: 40px;
+            transition: all .5s;
         }
         .register-btn:hover{
             background-color: #f83938;
             transition: all .5s;
+            box-shadow: 0px 5px 10px  rgba(0,0,0,0.5);
         }
         .icon-guanbi{
             position: absolute;
@@ -913,14 +932,13 @@
 
     })
 
-     $$('input').onclick = function () {
-         this.classList.add('backcol')
-     }
 
 
 
 
-    
+
+
+
 
 
 
