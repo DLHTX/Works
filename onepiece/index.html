@@ -1228,11 +1228,15 @@ $('.musicbox .pasue').onclick = function () {
 
     audio.onplay = function () {
        clock = setInterval(function () {
-           $('.musicbox .now').style.width =(audio.currentTime/audio.duration)*100 + '%'
+           $('.musicbox .now').style.width =(audio.currentTime/audio.duration)*260+'px'
            var min = Math.floor(audio.currentTime/60)
            var sec = Math.floor(audio.currentTime)%60 + ''
+           var tomin = Math.floor(audio.duration/60)
+           var tosec = Math.floor(audio.duration)%60 + ''
+
+           tosec = tosec.length == 2 ? tosec : '0' + tosec
            sec = sec.length == 2 ? sec :'0' + sec
-           $('.musicbox .time').innerText = min + ':' + sec
+           $('.musicbox .time').innerText = min + ':' + sec +'/'+tomin +':'+tosec
            $('.musicbox img').classList.add('trans')
 
        },1000)
@@ -1243,15 +1247,11 @@ $('.musicbox .pasue').onclick = function () {
 
     }
 
-
-    $('.musicbox .bar').onclick = function (clik) {
-        var per = clik.offsetX/260
-        audio.currentTime = (audio.duration * per)
-
-    }
-
-
-
+    $('.musicbox .total').addEventListener('click',function (e) {
+        var percent = e.offsetX/260
+        console.log(percent)
+        audio.currentTime = audio.duration * percent
+    })
 
 
 
