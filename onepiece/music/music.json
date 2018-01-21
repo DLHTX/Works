@@ -1,0 +1,21 @@
+[{
+	"src": "music/dlam.mp3",
+	"name": "哆啦A梦",
+	"author": "主题曲",
+	"img": "music/1.jpg"
+}, {
+	"src": "music/zgz.mp3",
+	"name": "追光者",
+	"author": "宁儿",
+	"img": "music/2.jpg"
+}, {
+	"src": "music/thz.mp3",
+	"name": "童话镇",
+	"author": "陈一发儿",
+	"img": "music/3.jpg"
+}, {
+	"src": "music/mdl.mp3",
+	"name": "梦灯笼",
+	"author": "你的名字",
+	"img": "music/4.jpg"
+}]

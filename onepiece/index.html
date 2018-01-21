@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_534384_p2e8rd25e14f5hfr.css">
     <link rel="shortcut icon" href="favicon.ico" type="favicon.ico"/>
     <link rel="stylesheet" href="//at.alicdn.com/t/font_544815_hhe92lmuo2inewmi.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_549222_dti3cx8gg3f2yb9.css">
     <style>
         *{
             margin: 0;
@@ -43,8 +44,10 @@
             text-align: center;
             display: block;
             position: fixed;
-
             width: 100%;
+            height:95px ;
+            line-height: 95px;
+            z-index: 100;
         }
         nav::before{
             content: '';
@@ -62,6 +65,7 @@
             position: fixed;
             cursor: pointer;
 
+
         }
         nav>.logo>img{
             width: 100%;
@@ -69,20 +73,16 @@
         }
         nav>ul>li{
             float: left;
-
             cursor: pointer;
-            margin: 30px 0;
+            margin: 0 0;
             font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;;
             color:#ddd;
-            padding:8px ;
+            padding:0 8px ;
             transition: all .5s;
             font-size: 17px;
-
-
         }
         nav>ul{
             float: right;
-
         }
         nav>ul>li:hover {
             color: #f83938;
@@ -590,6 +590,169 @@
 
 
 
+        .light{
+            perspective: 1000px;
+        }
+        .threed{
+
+            width: 600px;
+            height: 88px;
+            background: black;
+            position: absolute;
+            left: calc(50% - 300px);
+            text-align: center;
+            transform-style: preserve-3d;
+            cursor: pointer;
+            transition:all  1s;
+        }
+        .threed:hover{
+            transform: rotateX(90deg) ;
+            transition:all  1s;
+        }
+        .threed:hover  .musicbox-from{
+           opacity: 0;
+            transition:all  1s;
+
+        }
+        .threed:hover  .musicbox{
+            opacity:1;
+            transition:all  1s;
+
+        }
+        .musicbox-from{
+            width: 600px;
+            height: 90px;
+            background: black;
+            position: absolute;
+            left: calc(50% - 300px);
+            text-align: center;
+            transform:translateZ(45px);
+            backface-visibility: hidden;
+            transition:all  1s;
+        }
+        .musicbox{
+            width: 600px;
+            height:90px;
+            background: #343434;
+            position: absolute;
+            left: calc(50% - 300px);
+            text-align: center;
+            transform: rotateX(-90deg) translateZ(45px);
+            opacity: 0;
+            transition: all 1s;
+        }
+
+
+
+        .musicbox .control .iconfont{
+            font-size: 30px;
+            display: inline-block;
+            padding: 0 10px;
+            cursor: pointer;
+            transition: all .5s;
+
+        }
+        .musicbox .control .iconfont:hover{
+            color:#EF4239;
+            transition: all .5s;
+        }
+        .musicbox .control{
+            height: 50px;
+            line-height: 60px;
+
+        } .musicbox .bar{
+                      width: 260px;
+                      height: 5px;
+                      cursor: pointer;
+                  }
+
+        .musicbox .total{
+            width: 260px;
+            height: 5px;
+            background: white;
+            display: inline-block;
+            position: absolute;
+            left: calc(50% - 130px);
+            top:60px;
+            cursor: pointer;
+
+        }
+        .musicbox .now{
+            width: 0px;
+            height: 5px;
+            background: #EF4239;
+            display: inline-block;
+            position: absolute;
+            left: calc(50% - 130px);
+            top:60px;
+            cursor: pointer;
+        }
+
+         .musicbox .time{
+            position: absolute;
+            left: calc(50% - 50px) ;
+            top:35px;
+            width: 100px;
+             z-index: -1;
+        }
+        .musicbox .musicback{
+            width: 92px;
+            height: 93px;
+
+           position: absolute;
+            left: 0;
+            top: 0;
+         
+
+        }
+        .musicbox .musicinfo{
+             width: 92px;
+             height: 93px;
+
+             position: absolute;
+             left:calc(100% - 92px);
+             top: 0;
+
+         }
+        .musicbox .musicinfo .musicname{
+            height: 20px;
+            width: 92px;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: -15px;
+        }
+        .musicbox .musicinfo .author{
+             height: 20px;
+             width: 92px;
+             display: block;
+            position: absolute;
+            left: 0;
+            top: 15px;
+         }
+        .musicbox .musicback img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+
+
+        }
+        .trans{
+           animation:circle 4s infinite linear;
+        }
+        @keyframes circle{
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+
+
+
+
+
 
 
 
@@ -672,9 +835,44 @@
 
 </div>
 <header>
-    <nav class="clearfix">
 
-        <div class="logo"><img src="logo.png" alt=""></div>
+    <nav class="clearfix">
+      <div class="logo"><img src="logo.png" alt=""></div>
+
+<div class="light">
+    <div class="threed">
+       <div class="musicbox-from">Play Music</div>
+        <div class="musicbox clearfix">
+            <div class="control">
+                <span class="private iconfont icon-shangyishou"></span>
+                <span class="pasue iconfont icon-zanting"></span>
+                <span class="next iconfont icon-kuaijin"></span>
+
+
+            </div>
+            <div class="bar">
+                <span class="total"></span>
+                <span class="now"></span>
+
+            </div>
+            <div class="time">0:00</div>
+
+
+            <div class="musicback">
+                <img src=""></div>
+            <div class="musicinfo">
+                <span class="musicname">歌曲名</span>
+                <span class="author">作者</span>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
         <ul>
             <li>PRINCIPLE</li>
             <li>PIRATES</li>
@@ -957,16 +1155,100 @@
             })
         }
     )
+//以下为播放器部分这是分界线
+var musicnumber = 0
+var audio = new Audio()
+audio.autoplay = true
+getMusicList(function (list) {
+  loadMusic(list[musicnumber])
+    musicList =list
+})
 
-   
+   function getMusicList(callback) {
+        var xhr = new XMLHttpRequest()
+    xhr.open('GET','music/music.json',true)
+    xhr.send()
+
+    xhr.addEventListener('load',function () {
+        if((xhr.status >= 200 && xhr.status< 300)||xhr.status ===304 ){
+            callback(JSON.parse(xhr.responseText))
+
+        }else{
+            console.log('error')
+        }})
+    }
+
+function loadMusic(musicobj) {
+    audio.src = musicobj.src
+    audio.name = musicobj.name
+    audio.author = musicobj.author
+    audio.img = musicobj.img
+    $('.musicbox .musicname').innerText = audio.name
+    $('.musicbox .author').innerText = audio.author
+    $('.musicbox .musicback img').setAttribute('src',audio.img)
+    $('.musicbox-from').innerText = audio.name + '-'+  audio.author
+
+
+
+}
+
+$('.musicbox .pasue').onclick = function () {
+   if(audio.paused) {
+       audio.play()
+       $('.musicbox .pasue').classList.remove('icon-bofang')
+       $('.musicbox .pasue').classList.add('icon-zanting')
+
+   }else{
+       audio.pause()
+       $('.musicbox .pasue').classList.add('icon-bofang')
+       $('.musicbox .pasue').classList.remove('icon-zanting')
+
+   }
+    }
 
 
 
 
+    $('.musicbox .next').onclick =  function () {
+        musicnumber= ++musicnumber%musicList.length
+        console.log(musicnumber)
+        loadMusic(musicList[musicnumber])
+
+
+    }
+
+    $('.musicbox .private').onclick =  function () {
+        musicnumber=(musicList.length+--musicnumber)%musicList.length
+        console.log(musicnumber)
+        loadMusic(musicList[musicnumber])
+    }
 
 
 
 
+    audio.onplay = function () {
+       clock = setInterval(function () {
+           $('.musicbox .now').style.width =(audio.currentTime/audio.duration)*100 + '%'
+           var min = Math.floor(audio.currentTime/60)
+           var sec = Math.floor(audio.currentTime)%60 + ''
+           sec = sec.length == 2 ? sec :'0' + sec
+           $('.musicbox .time').innerText = min + ':' + sec
+           $('.musicbox img').classList.add('trans')
+
+       },1000)
+    }
+    audio.onpause = function () {
+        clearInterval(clock)
+        $('.musicbox img').classList.remove('trans')
+
+    }
+
+
+    $('.musicbox .bar').onclick = function (clik) {
+        var per = clik.offsetX/260
+        audio.currentTime = (audio.duration * per)
+
+    }
 
 
 
