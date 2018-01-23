@@ -751,57 +751,78 @@
                 }
             }
 
-.musicbox-from span{
+    .musicbox-from span{
     width: 10px;
     height: 20px;
     background: white;
     position: absolute;
-    margin-top:30px;
+    margin:30px 10px 0 10px;
     z-index: 3;
 
+
 }
+    .musicbox-from .ct{
+        transform: rotateX(180deg);
+        position: absolute;
+        width: 300px;
+        height: 100px;
+        left: calc(50% - 150px);
+        text-align: center;
+    }
+
+
         .musicbox-from .text{
-
             z-index: 1;
-
         }
 
         .musicbox-from .a{
-            left: 38%;
+            left: 28%;
             animation:music1 1.5s infinite linear;
         }
         .musicbox-from .b{
-            left: 41%;
+            left: 31%;
             animation:music2 1s infinite linear;
         }
         .musicbox-from .c{
-            left: 44%;
+            left: 34%;
             animation:music3 1.5s infinite linear;
         }
         .musicbox-from .d{
-            left: 47%;
+            left: 37%;
             animation:music4 2s infinite linear;
         }
         .musicbox-from .e{
-            left: 50%;
+            left: 40%;
             animation:music2 1s infinite linear;
         }
         .musicbox-from .a1{
-              left: 53%;
+              left: 43%;
               animation:music4 1s infinite linear;
           }
         .musicbox-from .b1{
-            left: 56%;
+            left: 46%;
             animation:music4 2s infinite linear;
         }
         .musicbox-from .c1{
-            left: 59%;
+            left: 49%;
             animation:music2 1s infinite linear;
         }
         .musicbox-from .d1{
-            left: 62%;
+            left: 52%;
             animation:music3 1.5s infinite linear;
         }
+        .musicbox-from .e1{
+            left: 55%;
+            animation:music4 1.5s infinite linear;
+        }.musicbox-from .f1{
+             left: 58%;
+             animation:music2 1s infinite linear;
+         }
+        .musicbox-from .g1{
+            left: 61%;
+            animation:music1 2s infinite linear;
+        }
+
 
 
 @keyframes music1{
@@ -995,6 +1016,9 @@
            <span class="b1"></span>
            <span class="c1"></span>
            <span class="d1"></span>
+              <span class="e1"></span>
+              <span class="f1"></span>
+              <span class="g1"></span>
               </div>
 
 
