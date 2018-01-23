@@ -2,7 +2,8 @@
 	"src": "music/dnxk.mp3",
 	"name": "等你下课",
 	"author": "周杰伦",
-	"img": "music/5.jpg"
+	"img": "music/5.jpg",
+	"geci": "music/geci.lrc"
 }, {
 	"src": "music/dlam.mp3",
 	"name": "哆啦A梦",
