@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="favicon.ico"/>
     <link rel="stylesheet" href="//at.alicdn.com/t/font_544815_hhe92lmuo2inewmi.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_549222_dti3cx8gg3f2yb9.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <style>
         *{
             margin: 0;
@@ -739,8 +740,14 @@
 
 
         }
+        .fix-img1 h2{
+            transform: perspective(600px);
+        }
         .trans{
            animation:circle 4s infinite linear;
+        }
+        .flex{
+            animation: flex 1s infinite linear;
         }
         @keyframes circle{
                 0%{
@@ -913,6 +920,41 @@
         .black{
             background: rgba(0,0,0,0.7);
             transition: all 1s;
+        }
+        @keyframes flex {
+            0%{
+                transform: translateY(15px);
+            }
+            10%{
+                transform: translateY(-15px);
+            }
+            20%{
+                transform: translateY(10px);
+            }
+            30%{
+                transform: translateY(-10px);
+            }
+            40%{
+                transform: translateY(5px);
+            }
+            50%{
+                transform: translateY(-5px);
+            }
+            60%{
+                transform: translateY(4px);
+            }
+            70%{
+                transform: translateY(-4px);
+            }
+            80%{
+                transform: translateY(3px);
+            }
+            90%{
+                transform: translateY(-3px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
         }
 
 
@@ -1241,32 +1283,32 @@
     </div>
 </main>
 <script>
-    function $(sel) {
+    function qer(sel) {
         return document.querySelector(sel)
     }
-    function $$(sel) {
+    function qerqer(sel) {
         return document.querySelectorAll(sel)
     }
 
-    var login = $('#login')
-    var register = $('#register')
-    var reisterer = $('.reisterer')
+    var login = qer('#login')
+    var register = qer('#register')
+    var reisterer = qer('.reisterer')
     reisterer.addEventListener('click',function () {
         login.classList.add('routeL')
         login.classList.remove('routeL2')
         register.classList.remove('routeR2')
         register.classList.add('routeR')
     })
-    var loginin = $('.two')
+    var loginin = qer('.two')
     loginin.addEventListener('click',function () {
         login.classList.add('routeL2')
         login.classList.remove('routeL')
         register.classList.remove('routeR')
         register.classList.add('routeR2')
     })
-    var close = $('.icon-guanbi')
-    var close2= $('#register .icon-guanbi')
-    var logo = $$('.logo')[0]
+    var close = qer('.icon-guanbi')
+    var close2= qer('#register .icon-guanbi')
+    var logo = qerqer('.logo')[0]
     logo.addEventListener('click',function () {
         login.style.opacity = '1'
         register.style.opacity = '1'
@@ -1279,16 +1321,16 @@
         login.style.opacity = '0'
         register.style.opacity = '0'
     })
-    var username = $('.login-user')
-    var loginpassw = $('.login-passw')
-    $('#login form').addEventListener('submit',function (e) {
+    var username = qer('.login-user')
+    var loginpassw = qer('.login-passw')
+    qer('#login form').addEventListener('submit',function (e) {
         e.preventDefault()
-        if(!/^\w{3,8}$/.test($('.facebox.one input[name=username]').value)){
-            $('.facebox.one .errormsg').innerText = '用户名不符合要求'
+        if(!/^\w{3,8}qer/.test(qer('.facebox.one input[name=username]').value)){
+            qer('.facebox.one .errormsg').innerText = '用户名不符合要求'
             return false
         }
-        if(!/^\w{6,10}$/.test($('.facebox.one input[name=password]').value)){
-            $('.facebox.one>.errormsg').innerText = '密码不符合要求'
+        if(!/^\w{6,10}qer/.test(qer('.facebox.one input[name=password]').value)){
+            qer('.facebox.one>.errormsg').innerText = '密码不符合要求'
             return false
         }
         this.submit()
@@ -1296,18 +1338,18 @@
 
     })
 
-    $('#register form').addEventListener('submit',function (e) {
+    qer('#register form').addEventListener('submit',function (e) {
         e.preventDefault()
-        if(!/^\w{3,8}$/.test($('.facebox.two input[name=username]').value)){
-            $('.facebox.two .errormsg').innerText = '用户名不符合要求'
+        if(!/^\w{3,8}qer/.test(qer('.facebox.two input[name=username]').value)){
+            qer('.facebox.two .errormsg').innerText = '用户名不符合要求'
             return false
         }
-        if(!/^\w{6,10}$/.test($('.facebox.two input[name=password]').value)){
-            $('.facebox.two>.errormsg').innerText = '密码不符合要求'
+        if(!/^\w{6,10}qer/.test(qer('.facebox.two input[name=password]').value)){
+            qer('.facebox.two>.errormsg').innerText = '密码不符合要求'
             return false
         }
-        if(($('.facebox.two input[name=password2]').value !==$('.facebox.two input[name=password]'))){
-            $('.facebox.two>.errormsg').innerText = '两次密码不一致，请重新输入！'
+        if((qer('.facebox.two input[name=password2]').value !==qer('.facebox.two input[name=password]'))){
+            qer('.facebox.two>.errormsg').innerText = '两次密码不一致，请重新输入！'
             return false
         }
 
@@ -1316,7 +1358,7 @@
 
     })
     
-    $$('.users').forEach(
+    qerqer('.users').forEach(
         function (e,i,array) {
             e.addEventListener('mouseenter',function () {
                 this.classList.add('backcol')
@@ -1327,7 +1369,7 @@
         }
     )
 
-    $$('.password').forEach(
+    qerqer('.password').forEach(
         function (e,i,array) {
             e.addEventListener('mouseenter',function () {
                 this.classList.add('backcol')
@@ -1371,35 +1413,35 @@
         audio.name = musicobj.name
         audio.author = musicobj.author
         audio.img = musicobj.img
-        $('.musicbox .musicname').innerText = audio.name
-        $('.musicbox .author').innerText = audio.author
-        $('.musicbox .musicback img').setAttribute('src',audio.img)
+        qer('.musicbox .musicname').innerText = audio.name
+        qer('.musicbox .author').innerText = audio.author
+        qer('.musicbox .musicback img').setAttribute('src',audio.img)
 
 
     }
 
-    $('.musicbox .pasue').onclick = function () {
+    qer('.musicbox .pasue').onclick = function () {
         if(audio.paused) {
        audio.play()
-       $('.musicbox .pasue').classList.remove('icon-bofang')
-       $('.musicbox .pasue').classList.add('icon-zanting')
+       qer('.musicbox .pasue').classList.remove('icon-bofang')
+       qer('.musicbox .pasue').classList.add('icon-zanting')
         }else{
        audio.pause()
-       $('.musicbox .pasue').classList.add('icon-bofang')
-       $('.musicbox .pasue').classList.remove('icon-zanting')
+       qer('.musicbox .pasue').classList.add('icon-bofang')
+       qer('.musicbox .pasue').classList.remove('icon-zanting')
         }
     }
 
 
 
 
-    $('.musicbox .next').onclick =  function () {
+    qer('.musicbox .next').onclick =  function () {
         musicnumber= ++musicnumber%musicList.length
         console.log(musicnumber)
         loadMusic(musicList[musicnumber])
     }
 
-    $('.musicbox .private').onclick =  function () {
+    qer('.musicbox .private').onclick =  function () {
         musicnumber=(musicList.length+--musicnumber)%musicList.length
         console.log(musicnumber)
         loadMusic(musicList[musicnumber])
@@ -1407,30 +1449,30 @@
 
     audio.onplay = function () {
        clock = setInterval(function () {
-           $('.musicbox .now').style.width =(audio.currentTime/audio.duration)*260+'px'
+           qer('.musicbox .now').style.width =(audio.currentTime/audio.duration)*260+'px'
            var min = Math.floor(audio.currentTime/60)
            var sec = Math.floor(audio.currentTime)%60 + ''
            var tomin = Math.floor(audio.duration/60)
            var tosec = Math.floor(audio.duration)%60 + ''
            tosec = tosec.length == 2 ? tosec : '0' + tosec
           sec = sec.length == 2 ? sec :'0' + sec
-           $('.musicbox-from .text').classList.add('dis')
-           $('.musicbox-from .ct').classList.remove ('opa')
+           qer('.musicbox-from .text').classList.add('dis')
+           qer('.musicbox-from .ct').classList.remove ('opa')
 
-    $('.musicbox .time').innerText = '0'+ min + ':' + sec +'/'+tomin +':'+tosec
-           $('.musicbox img').classList.add('trans')
+    qer('.musicbox .time').innerText = '0'+ min + ':' + sec +'/'+tomin +':'+tosec
+           qer('.musicbox img').classList.add('trans')
        },1000)
     }
 
     audio.onpause = function () {
         clearInterval(clock)
-        $('.musicbox img').classList.remove('trans')
-        $('.musicbox-from .ct').classList.add ('opa')
-        $('.musicbox-from .text').innerText = audio.name + '-' +audio.author
-        $('.musicbox-from .text').classList.remove('dis')
+        qer('.musicbox img').classList.remove('trans')
+        qer('.musicbox-from .ct').classList.add ('opa')
+        qer('.musicbox-from .text').innerText = audio.name + '-' +audio.author
+        qer('.musicbox-from .text').classList.remove('dis')
     }
 
-    $('.musicbox .bar').addEventListener('click',function (e) {
+    qer('.musicbox .bar').addEventListener('click',function (e) {
         var percent = e.offsetX/260
         audio.currentTime = audio.duration * percent
         console.log(percent)
@@ -1443,13 +1485,25 @@
 
     setInterval(function () {
         if(window.scrollY>1000){
-            $('nav').classList.add('black')
+            qer('nav').classList.add('black')
         }else {
-            $('nav').classList.remove('black')
+            qer('nav').classList.remove('black')
         }
     },100)
 
 
+
+    $('.fix-img1 h2').one('flex',function () {
+        $('.fix-img1 h2').addClass('flex')
+        setTimeout(function () {
+            $('.fix-img1 h2').removeClass('flex')
+        },1000)
+    })
+    setInterval(function () {
+        if(window.scrollY>1000){
+            $('.fix-img1 h2').trigger('flex')
+        }
+    },100)
 
 
 
