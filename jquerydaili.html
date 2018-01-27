@@ -60,15 +60,16 @@
         }
         .dis{
             display: block !important;
+            style
         }
 
     </style>
 </head>
 <body>
-<h1>珠宝首饰</h1>
+<h1>可爱的王小秋</h1>
 <div class="box clearfix" >
     <div class="imgbox">
-        <img src="https://picsum.photos/200/200/?image=2 " alt="">
+        <img src="http://img7.doubanio.com/view/photo/s_ratio_poster/public/p480747492.jpg" alt="">
         <div class="bulr"><button>删除</button></div>
         <p>藏美千足金</p>
         <p>￥1699.00</p>
@@ -97,7 +98,7 @@ function getHtml(prod) {
     html += '<div class="imgbox">'
     html +=' <img src="'+prod.img+'" alt="">'
     html +='<div class="bulr"><button>删除</button></div>'
-    html +=' <p>藏美千足金</p>'
+    html +=' <p>可爱的王小秋</p>'
     html +=' <p>'+prod.price+'</p>'
     return html
 }
@@ -109,12 +110,15 @@ function getData() {
         rad = Math.floor(Math.random()*100)
         dat = {
             img:'//picsum.photos/200/200/?image='+rad,
-            price:'￥'+ rad
+            price:'￥'+ rad*1000
         }
          data.push(dat)
     }
     return data
+
 }
+getData()
+console.log(getData())
 
 $('.add').on('click',function () {
     $('.imgbox .bulr').removeClass('dis')
