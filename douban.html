@@ -5,7 +5,7 @@
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Title</title>
+    <title>豆瓣电影</title>
     <link rel="stylesheet" href="//at.alicdn.com/t/font_556052_pdohufedocpaatt9.css">
     <style>
         *{
@@ -334,11 +334,11 @@ var Search = {
         load:
             function () {
                 var _this= this
-                var keyword = $('input').val()
+                var $keyword = $('input').val()
                 $('.button').on('click',function () {
                    $('.loading').show()
                     var this2= _this
-                    console.log($('input').val())
+                    console.log($keyword)
                    $.ajax({
                        url:'http://api.douban.com/v2/movie/search',
                        type:'GET',
