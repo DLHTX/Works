@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 1000px;
+            margin: 0 auto  ;
+        }
+        img{
+            margin-top: 30px;
+            height: 311px;
+            width: 326px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+<img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+<img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+<img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+<img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+<img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+<img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+<img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+<img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+<img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+<img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+<img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+<img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+<img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+    <img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+    <img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+    <img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+    <img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+    <img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+    <img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+    <img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+    <img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+    <img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+    <img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+    <img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+    <img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+    <img src="http://via.placeholder.com/311x326" alt="" data-src="lazyload.jpg">
+</div>
+<script>
+    start()
+
+
+    $(window).on('scroll',function () {
+       start()
+    })
+
+
+    function start() {
+        $('.box img').each(function () {
+            var _this = $(this)
+            if(isView(_this)){
+                setTimeout(function () {
+                    changesrc(_this)
+                },500)
+            }
+        })
+    }
+
+
+    function isView($node) {
+        return $node.offset().top <= $(window).height() + $(window).scrollTop()
+    }
+
+
+    function changesrc($img) {
+        $img.attr('src', $img.attr('data-src'))
+    }
+
+
+</script>
+
+</body>
+</html>

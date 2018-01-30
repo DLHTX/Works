@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+
+            margin: 0 auto;
+
+        }
+        img{
+            margin-top: 30px;
+            float: left;
+            margin-left: 10px;
+            width: 100px;
+            position: absolute;
+            transition: all .3s;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box clearfix">
+    <img src="http://via.placeholder.com/100x100" alt="">
+    <img src="http://via.placeholder.com/100x70" alt="" >
+    <img src="http://via.placeholder.com/100x150" alt="">
+    <img src="http://via.placeholder.com/100x90" alt="" >
+    <img src="http://via.placeholder.com/100x250" alt="">
+    <img src="http://via.placeholder.com/100x70" alt="" >
+    <img src="http://via.placeholder.com/100x90" alt="">
+    <img src="http://via.placeholder.com/100x150" alt="" >
+    <img src="http://via.placeholder.com/100x90" alt="">
+    <img src="http://via.placeholder.com/100x250" alt="" >
+    <img src="http://via.placeholder.com/100x120" alt="">
+    <img src="http://via.placeholder.com/100x70" alt="" >
+    <img src="http://via.placeholder.com/100x110" alt="">
+    <img src="http://via.placeholder.com/100x210" alt="" >
+    <img src="http://via.placeholder.com/100x240" alt="">
+    <img src="http://via.placeholder.com/100x70" alt="" >
+    <img src="http://via.placeholder.com/100x40" alt="">
+    <img src="http://via.placeholder.com/100x30" alt="" >
+    <img src="http://via.placeholder.com/100x100" alt="">
+    <img src="http://via.placeholder.com/100x250" alt="" >
+    <img src="http://via.placeholder.com/100x40" alt="">
+    <img src="http://via.placeholder.com/100x30" alt="" >
+    <img src="http://via.placeholder.com/100x100" alt="">
+    <img src="http://via.placeholder.com/100x250" alt="" >
+    <img src="http://via.placeholder.com/100x100" alt="">
+    <img src="http://via.placeholder.com/100x70" alt="" >
+    <img src="http://via.placeholder.com/100x150" alt="">
+    <img src="http://via.placeholder.com/100x200" alt="" >
+    <img src="http://via.placeholder.com/100x250" alt="">
+    <img src="http://via.placeholder.com/100x70" alt="" >
+    <img src="http://via.placeholder.com/100x90" alt="">
+    <img src="http://via.placeholder.com/100x120" alt="" >
+    <img src="http://via.placeholder.com/100x90" alt="">
+    <img src="http://via.placeholder.com/100x250" alt="" >
+    <img src="http://via.placeholder.com/100x250" alt="" >
+    <img src="http://via.placeholder.com/100x120" alt="">
+    <img src="http://via.placeholder.com/100x70" alt="" >
+    <img src="http://via.placeholder.com/100x110" alt="">
+    <img src="http://via.placeholder.com/100x210" alt="" >
+    <img src="http://via.placeholder.com/100x240" alt="">
+    <img src="http://via.placeholder.com/100x70" alt="" >
+    <img src="http://via.placeholder.com/100x40" alt="">
+    <img src="http://via.placeholder.com/100x30" alt="" >
+    <img src="http://via.placeholder.com/100x100" alt="">
+    <img src="http://via.placeholder.com/100x250" alt="" >
+    <img src="http://via.placeholder.com/100x100" alt="">
+    <img src="http://via.placeholder.com/100x70" alt="" >
+    <img src="http://via.placeholder.com/100x150" alt="">
+    <img src="http://via.placeholder.com/100x200" alt="" >
+    <img src="http://via.placeholder.com/100x250" alt="">
+    <img src="http://via.placeholder.com/100x70" alt="" >
+    <img src="http://via.placeholder.com/100x90" alt="">
+    <img src="http://via.placeholder.com/100x120" alt="" >
+    <img src="http://via.placeholder.com/100x90" alt="">
+    <img src="http://via.placeholder.com/100x250" alt="" >
+    <img src="http://via.placeholder.com/100x250" alt="" >
+    <img src="http://via.placeholder.com/100x120" alt="">
+    <img src="http://via.placeholder.com/100x70" alt="" >
+    <img src="http://via.placeholder.com/100x110" alt="">
+    <img src="http://via.placeholder.com/100x210" alt="" >
+    <img src="http://via.placeholder.com/100x240" alt="">
+    <img src="http://via.placeholder.com/100x70" alt="" >
+    <img src="http://via.placeholder.com/100x40" alt="">
+    <img src="http://via.placeholder.com/100x30" alt="" >
+    <img src="http://via.placeholder.com/100x100" alt="">
+    <img src="http://via.placeholder.com/100x250" alt="" >
+    <img src="http://via.placeholder.com/100x100" alt="">
+    <img src="http://via.placeholder.com/100x70" alt="" >
+    <img src="http://via.placeholder.com/100x150" alt="">
+    <img src="http://via.placeholder.com/100x200" alt="" >
+    <img src="http://via.placeholder.com/100x250" alt="">
+    <img src="http://via.placeholder.com/100x70" alt="" >
+    <img src="http://via.placeholder.com/100x90" alt="">
+    <img src="http://via.placeholder.com/100x120" alt="" >
+    <img src="http://via.placeholder.com/100x90" alt="">
+    <img src="http://via.placeholder.com/100x250" alt="" >
+
+</div>
+<script>
+
+    var index
+    index = Math.floor(($('.box').width())/($('img').outerWidth(true)))
+    var sz = []
+    for(var i = 0 ; i<index ;i++){
+        sz[i]= 0
+    }
+    
+    $('img').on('load',function () {
+        var minValue = sz[0]
+        var minIndex = 0
+        for(var i=0;i<index;i++){
+            if(sz[i]<minValue){
+                minValue = sz[i]
+                minIndex = i
+            }
+          console.log(sz)
+        }
+        $(this).css({
+            left:minIndex * $('img').outerWidth(true),
+            top:minValue
+        })
+        sz[minIndex] += $(this).outerHeight(true)
+
+    })
+
+
+
+
+    $(window).on('resize',function () {
+        sz = []
+        for(var i = 0 ; i<index ;i++){
+            sz[i]= 0
+        }
+        index = Math.floor(($('.box').width())/($('img').outerWidth(true)))
+
+
+        $('img').each(function () {
+            var minValue = sz[0]
+            var minIndex = 0
+            for(var i=0;i<index;i++){
+                if(sz[i]<minValue){
+                    minValue = sz[i]
+                    minIndex = i
+                }
+                console.log(sz)
+            }
+            $(this).css({
+                left:minIndex * $('img').outerWidth(true),
+                top:minValue
+            })
+            sz[minIndex] += $(this).outerHeight(true)
+
+        })
+
+
+    })
+
+
+
+
+//[100,170,0]
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
