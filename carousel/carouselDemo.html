@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_560878_h4a2zlz0snqoxbt9.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+
+        }
+        .dots{
+            position: absolute;
+            top:85%;
+            left: calc(50% - 50px);
+        }
+        .dot{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color:white;
+            cursor: pointer;
+        }
+        .carousel{
+            background-color: #0FB492;
+            height: 300px;
+            width: 600px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+
+
+        }
+
+        .icon-next{
+            position: absolute;
+            font-size: 50px;
+            color:white;
+            cursor: pointer;
+            left: 90%;
+            top:calc(50% - 35px )
+        }
+        .icon-last{
+            position: absolute;
+            top:calc(50% - 35px );
+            font-size: 50px;
+            color:white;
+            cursor: pointer;
+        }
+        .clearfix::after{
+            display: block;
+            content: '';
+            clear: both;
+        }
+        img{
+            height: 300px;
+            width: 600px;
+            float: left;
+
+        }
+        ul{
+            background-color: #f6695c;
+            position: absolute;
+
+        }
+        .green{
+            color:#4CAF50;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="carousel">
+    <ul class="clearfix">
+        <li><img src="1.jpg" alt=""></li>
+        <li><img src="2.jpg" alt=""></li>
+        <li><img src="3.jpg" alt=""></li>
+        <li><img src="4.jpg" alt=""></li>
+    </ul>
+    <div class="btn">
+        <span class="iconfont icon-next"></span>
+        <span class="iconfont icon-last"></span>
+    </div>
+    <div class="dots">
+        <span class="dot iconfont icon-yuan green"></span>
+        <span class="dot iconfont icon-yuan"></span>
+        <span class="dot iconfont icon-yuan"></span>
+        <span class="dot iconfont icon-yuan"></span>
+
+    </div>
+
+</div>
+
+
+
+<div class="carousel">
+    <ul class="clearfix">
+        <li><img src="1.jpg" alt=""></li>
+        <li><img src="2.jpg" alt=""></li>
+        <li><img src="3.jpg" alt=""></li>
+        <li><img src="4.jpg" alt=""></li>
+    </ul>
+    <div class="btn">
+        <span class="iconfont icon-next"></span>
+        <span class="iconfont icon-last"></span>
+    </div>
+    <div class="dots">
+        <span class="dot iconfont icon-yuan green"></span>
+        <span class="dot iconfont icon-yuan"></span>
+        <span class="dot iconfont icon-yuan"></span>
+        <span class="dot iconfont icon-yuan"></span>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="carousel.js"></script>
+</body>
+</html>

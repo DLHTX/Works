@@ -921,6 +921,9 @@
             background: rgba(0,0,0,0.7);
             transition: all 1s;
         }
+        .dh{
+            animation: flex 1s linear ;
+        }
         @keyframes flex {
             0%{
                 transform: translateY(15px);
@@ -1116,7 +1119,7 @@
 </header>
 <main>
     <section class="section-a clearfix" >
-        <h2>PRINCIPLE</h2>
+        <h2 class="title">PRINCIPLE</h2>
         <p>Main members introduction.</p>
         <ul class="clearfix">
             <li>
@@ -1141,7 +1144,7 @@
 
     </section>
     <div class="fix-img1">
-        <h2>PIRATES</h2>
+        <h2 class="title">PIRATES</h2>
         <p>The introduction of other powerful group of Pirates</p>
     </div>
     <section class="section-b">
@@ -1181,7 +1184,7 @@
 
     </section>
     <div class="fix-img2">
-        <h2>MINOR</h2>
+        <h2 class="title"> MINOR</h2>
         <p>Other members of the grass cap group</p>
     </div>
     <section class="section-c">
@@ -1253,7 +1256,7 @@
     <div class="back">
 
 
-        <h2>CONTACT US</h2>
+        <h2 class="title">CONTACT US</h2>
         <p>Lorem ipsum dolor sit amet consectetur.</p>
 
 
@@ -1483,27 +1486,29 @@
         loadMusic(musicList[musicnumber])
     }
 
-    setInterval(function () {
-        if(window.scrollY>1000){
-            qer('nav').classList.add('black')
-        }else {
-            qer('nav').classList.remove('black')
-        }
-    },100)
 
 
+    $(window).scroll(function () {
+        console.log( $('.title').height() <= $(window).scrollTop() + $(window).height())
 
-    $('.fix-img1 h2').one('flex',function () {
-        $('.fix-img1 h2').addClass('flex')
-        setTimeout(function () {
-            $('.fix-img1 h2').removeClass('flex')
-        },1000)
+        $('.title').each(function () {
+            if(isShow($(this))){
+                var _this=$(this)
+                _this.addClass('dh')
+            }
+        })
     })
-    setInterval(function () {
-        if(window.scrollY>1000){
-            $('.fix-img1 h2').trigger('flex')
-        }
-    },100)
+    function isShow($node) {
+        $node.height() <= $(window).scrollTop() + $(window).height()
+    }
+
+
+
+
+
+
+
+
 
 
 

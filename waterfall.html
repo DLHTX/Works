@@ -16,11 +16,10 @@
         }
         img{
             margin-top: 30px;
-            float: left;
             margin-left: 10px;
             width: 100px;
             position: absolute;
-            transition: all .3s;
+            transition: all .4s;
         }
         .clearfix::after{
             content: '';
@@ -118,7 +117,7 @@
     for(var i = 0 ; i<index ;i++){
         sz[i]= 0
     }
-    
+
     $('img').on('load',function () {
         var minValue = sz[0]
         var minIndex = 0
